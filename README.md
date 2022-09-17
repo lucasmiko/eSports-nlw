@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./assets/img/nlw-esports-logo.svg" alt="Next Level Week Esports Logo"/></p>
+<img src="https://app.rocketseat.com.br/_next/image?url=%2Fassets%2Ficons%2Fevent%2Fnlw-esports-logo.svg&w=1920&q=75" alt="Next Level Week Esports Logo"/></p>
 
 <br>
 
