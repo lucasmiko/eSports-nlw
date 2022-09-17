@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Game {
+  id String @id @default(uuid())
+  title String
+  bannerUrl String
+
+  ads Ad[] //This not be a field in database, is only to prisma know that exist the relation
+}
+
+model Ad {
+  id String @id @default(uuid())
+  gameId String
+  name String
+  yearsPlaying String
+  discord String
+  weekDays String
+  hourStart Int
+  hourEnd Int
+  useVoiceChannel Boolean
+  createdAt DateTime @default(now()) //Defines that by default the insert will use the current date
+
+  game Game @relation(fields: [gameId], references: [id])
+}
